@@ -1,0 +1,44 @@
+# WAP to input a number and show table of that number in following format
+# Input: 9
+# Output:
+# 9 x 1 = 9
+# 9 x 2 = 18
+# ...
+# 9 x 10= 90
+
+# Here we have initalize the counter from 1, execute the statement till counter is less than or equals to 10 
+# and increment the counter by 1
+
+n=int(input("Input: "))
+counter=1
+while counter<=10:
+    print(f"{n} x {counter} = {n*counter}")
+    counter+=1
+
+
+
+# WAP to input a number and print sum of digits in that number
+
+n=int(input("Input: "))
+sum=0
+while n>0:
+    sum=sum+n%10
+    n=n//10
+print(f"Output: {sum}")
+
+
+
+
+# WAP to input a number and print table of that number Once the table get printed, 
+# ask the user to print more tables If the user say No then stop the program and 
+# input a new number again and show table of that number 
+
+while True:
+    n=input("Enter a number : ")
+    counter=1
+    while counter<=10:
+        print(f"{n} x {counter}")
+        counter+=1
+    ans=input("Create more tables [Yes/No] ? ")
+    if ans=="No": break
+
